@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Code\\Education\\GitMySqldb\\0203Console\\MYSQLAPP\\MYSQLAPP.csproj": {}
+    "C:\\Code\\Education\\GitMySqldb\\MySQLdb\\0203Console\\MYSQLAPP\\MYSQLAPP.csproj": {}
   },
   "projects": {
-    "C:\\Code\\Education\\GitMySqldb\\0203Console\\MYSQLAPP\\MYSQLAPP.csproj": {
+    "C:\\Code\\Education\\GitMySqldb\\MySQLdb\\0203Console\\MYSQLAPP\\MYSQLAPP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Code\\Education\\GitMySqldb\\0203Console\\MYSQLAPP\\MYSQLAPP.csproj",
+        "projectUniqueName": "C:\\Code\\Education\\GitMySqldb\\MySQLdb\\0203Console\\MYSQLAPP\\MYSQLAPP.csproj",
         "projectName": "MYSQLAPP",
-        "projectPath": "C:\\Code\\Education\\GitMySqldb\\0203Console\\MYSQLAPP\\MYSQLAPP.csproj",
+        "projectPath": "C:\\Code\\Education\\GitMySqldb\\MySQLdb\\0203Console\\MYSQLAPP\\MYSQLAPP.csproj",
         "packagesPath": "C:\\Users\\artyo\\.nuget\\packages\\",
-        "outputPath": "C:\\Code\\Education\\GitMySqldb\\0203Console\\MYSQLAPP\\obj\\",
+        "outputPath": "C:\\Code\\Education\\GitMySqldb\\MySQLdb\\0203Console\\MYSQLAPP\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\artyo\\AppData\\Roaming\\NuGet\\NuGet.Config",

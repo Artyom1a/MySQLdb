@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GmcYQVJsFot7U2OUaTfclshw8aEonS5cSn+nxnLFCqfcCMOrS35lMaYjjR+PwfduWR+I6CTuZpMZNA/NJmx9UQ==",
+  "dgSpecHash": "B9QCR84FUrR/J1egkOSE7BiZ3/WSCFD8D70+OLBFt+Y2bk78aFnFyw6fRFlJ5ve5ZaPdh6tZWIioKtMaVH7Z6A==",
   "success": true,
-  "projectFilePath": "C:\\Code\\Education\\GitMySqldb\\0203Console\\MYSQLAPP\\MYSQLAPP.csproj",
+  "projectFilePath": "C:\\Code\\Education\\GitMySqldb\\MySQLdb\\0203Console\\MYSQLAPP\\MYSQLAPP.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\artyo\\.nuget\\packages\\google.protobuf\\3.21.9\\google.protobuf.3.21.9.nupkg.sha512",
     "C:\\Users\\artyo\\.nuget\\packages\\k4os.compression.lz4\\1.2.6\\k4os.compression.lz4.1.2.6.nupkg.sha512",
