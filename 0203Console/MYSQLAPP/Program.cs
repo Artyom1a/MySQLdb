@@ -37,7 +37,8 @@ namespace MySqlApp // Note: actual namespace depends on the project name.
             //}
 
             //Console.WriteLine(query.GetName("mamal"));
-            query.DeleteItem(1);
+            //query.DeleteItem(1);
+            query.UpdateItem(12, "cat","mammal");
         }
     }
 }
