@@ -17,7 +17,7 @@ namespace MYSQLAPP.DAOs
         private readonly string SQL_selectItems = "select Id,`name`,`type` from animals;";
         private readonly string SQL_selectItemName = "select * from animals where {0};";
         private readonly string SQL_DeleteItemID = "delete from animals where {0};";
-        private readonly string SQL_UpdateItem = "update animals set name = '{1}' , type = '{2}' where id = {0};";
+        private readonly string SQL_UpdateItem = "update animals set name = @name , type = @type where id = @id;";
 
         public int Add(Animal animal)
         {
@@ -111,7 +111,7 @@ namespace MYSQLAPP.DAOs
 
 
 
-        public Animal GetName(string name)
+        public Animal GetByName(string name)
         {
             MySqlConnection connection = Connection();
             if (connection == null) throw new Exception("connection error");
@@ -169,7 +169,7 @@ namespace MYSQLAPP.DAOs
             if (connection == null) throw new Exception("connection error");
             try
             {
-                MySqlCommand command = new MySqlCommand(string.Format(SQL_UpdateItem, $"id = '{id}'", $"name = '{name}'", $"type = '{type}'"), connection);
+                MySqlCommand command = new MySqlCommand(SQL_UpdateItem, connection);
                 command.Parameters.AddWithValue("@id", id);
                 command.Parameters.AddWithValue("@name", name);
                 command.Parameters.AddWithValue("@type", type);
