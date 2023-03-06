@@ -76,3 +76,4 @@ C:\Code\Education\GitMySqldb\MySQLdb\0203Console\MYSQLAPP\obj\Debug\net6.0\refin
 C:\Code\Education\GitMySqldb\MySQLdb\0203Console\MYSQLAPP\obj\Debug\net6.0\MYSQLAPP.pdb
 C:\Code\Education\GitMySqldb\MySQLdb\0203Console\MYSQLAPP\obj\Debug\net6.0\MYSQLAPP.genruntimeconfig.cache
 C:\Code\Education\GitMySqldb\MySQLdb\0203Console\MYSQLAPP\obj\Debug\net6.0\ref\MYSQLAPP.dll
+C:\Code\Education\GitMySqldb\MySQLdb\0203Console\MYSQLAPP\bin\Debug\net6.0\MYSQLAPP.dll.config

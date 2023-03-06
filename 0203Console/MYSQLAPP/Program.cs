@@ -1,4 +1,5 @@
 ﻿// Susing System;
+using Microsoft.Extensions.Configuration;
 using MYSQLAPP.DAOs;
 using MYSQLAPP.Models;
 namespace MySqlApp // Note: actual namespace depends on the project name.
@@ -7,6 +8,12 @@ namespace MySqlApp // Note: actual namespace depends on the project name.
     {
         static void Main(string[] args)
         {
+            IConfigurationRoot configuration = new ConfigurationBuilder()
+          .SetBasePath(Directory.GetCurrentDirectory())
+          .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+          .Build();
+
+            string connectionString = configuration.GetConnectionString("MyDatabase");
             //AnimalsDAO query = new AnimalsDAO();
             //Animal animal = new Animal() { Name = "orel", Type = "bird" };
             //Console.WriteLine(query.Add(animal));
@@ -38,7 +45,10 @@ namespace MySqlApp // Note: actual namespace depends on the project name.
 
             //Console.WriteLine(query.GetName("mamal"));
             //query.DeleteItem(1);
-            query.UpdateItem(12, "cat","mammal");
+            query.UpdateItem(12, "cat", "mammal");
+
+
         }
+       
     }
 }
