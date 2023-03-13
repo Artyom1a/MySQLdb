@@ -17,3 +17,5 @@ INSERT INTO book (title, author, price,amount) VALUES('Идиот','Достое
 INSERT INTO book (title, author, price,amount) VALUES('Братья Карамазовы','Достоевский Ф.М.',799.01,2);
 SELECT * FROM book;
 SELECT author,title,price FROM book;
+SELECT title as Название,author as Автор FROM book;
+SELECT title,amount,amount*1.65 as pack FROM book;
