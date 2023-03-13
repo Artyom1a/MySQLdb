@@ -32,3 +32,19 @@ SELECT title,
 FROM book;
 
 SELECT title,author,amount,ROUND(price*0.7,2) as new_price from book;
+
+
+SELECT title, amount, price, 
+    IF(amount<4, price*0.5, price*0.7) AS sale
+FROM book;
+
+SELECT title, amount, price, 
+    ROUND(IF(amount<4, price*0.5, price*0.7),2) AS sale
+FROM book;
+
+SELECT title, amount, price,
+    ROUND(IF(amount < 4, price * 0.5, IF(amount < 11, price * 0.7, price * 0.9)), 2) AS sale,
+    IF(amount < 4, 'скидка 50%', IF(amount < 11, 'скидка 30%', 'скидка 10%')) AS Ваша_скидка
+FROM book;
+
+SELECT author,title,ROUND(IF(author="Булгаков М.А.",price*1.1,IF(author="Есенин С.А.",price*1.05,price)),2) as new_price from book;
