@@ -122,3 +122,19 @@ SELECT author,title
 FROM book
 WHERE amount>=1 AND amount<=14
 ORDER BY author DESC, title asc;
+SELECT title 
+FROM book
+WHERE title LIKE 'Б%';
+/* эквивалентное условие 
+title LIKE 'б%'
+*/
+
+SELECT title FROM book 
+WHERE title LIKE "_____";
+
+SELECT title FROM book 
+WHERE title LIKE "______%";
+/* эквивалентные условия 
+title LIKE "%______"
+title LIKE "%______%"
+*/
