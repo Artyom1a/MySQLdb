@@ -116,3 +116,9 @@ SELECT author, title, amount AS Количество
 FROM book
 WHERE price < 750
 ORDER BY 1, 3 DESC;
+
+
+SELECT author,title
+FROM book
+WHERE amount>=1 AND amount<=14
+ORDER BY author DESC, title asc;
