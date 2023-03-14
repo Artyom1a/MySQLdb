@@ -92,3 +92,17 @@ WHERE author = 'Булгаков М.А.' OR author = 'Достоевский Ф.
 
 
 SELECT title,author FROM book where (price>= 540.50 and price<=800) and amount in (2,3,5,7);
+
+SELECT title, author, price
+FROM book
+ORDER BY title;
+
+
+SELECT title, author, price
+FROM book
+ORDER BY 1;
+
+SELECT author, title, amount AS Количество
+FROM book
+WHERE price < 750
+ORDER BY author, amount DESC;
