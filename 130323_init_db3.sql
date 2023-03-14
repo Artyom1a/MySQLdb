@@ -48,3 +48,10 @@ SELECT title, amount, price,
 FROM book;
 
 SELECT author,title,ROUND(IF(author="Булгаков М.А.",price*1.1,IF(author="Есенин С.А.",price*1.05,price)),2) as new_price from book;
+SELECT title, price 
+FROM book
+WHERE price < 600;
+SELECT title, author, price * amount AS total
+FROM book
+WHERE price * amount > 4000;
+SELECT author,title,price FROM book WHERE amount<10;
