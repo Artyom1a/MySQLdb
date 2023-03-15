@@ -145,3 +145,7 @@ WHERE   title LIKE "_% и _%" /*отбирает слово И внутри на
     OR title LIKE "и _%" /*отбирает слово И в начале названия */
     OR title LIKE "_% и" /*отбирает слово И в конце названия */
     OR title LIKE "и" /* отбирает название, состоящее из одного слова И */
+
+
+SELECT title FROM book 
+WHERE title NOT LIKE "% %"; 
