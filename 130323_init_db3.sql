@@ -187,3 +187,12 @@ INSERT INTO book (title, author, price, amount) VALUES ('Черный челов
 SELECT author, COUNT(author), COUNT(amount), COUNT(*)
 FROM book
 GROUP BY author;
+
+
+SELECT author as Автор, COUNT(*) as Различных_книг,Sum(amount)  as Количество_экземпляров
+FROM book
+GROUP BY author;
+
+SELECT author, MIN(price) AS min_price
+FROM book
+GROUP BY author;
