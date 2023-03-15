@@ -157,3 +157,11 @@ WHERE title LIKE "_% _%"
 and (author LIKE "% С._.%"
 OR author LIKE "% _.С.")
 ORDER BY TITLE;
+
+
+SELECT DISTINCT author
+FROM book;
+
+SELECT  author
+FROM book
+GROUP BY author;
