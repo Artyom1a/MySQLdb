@@ -149,3 +149,11 @@ WHERE   title LIKE "_% и _%" /*отбирает слово И внутри на
 
 SELECT title FROM book 
 WHERE title NOT LIKE "% %"; 
+
+
+SELECT title,author
+FROM book
+WHERE title LIKE "_% _%"
+and (author LIKE "% С._.%"
+OR author LIKE "% _.С.")
+ORDER BY TITLE;
