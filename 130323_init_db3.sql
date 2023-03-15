@@ -165,3 +165,25 @@ FROM book;
 SELECT  author
 FROM book
 GROUP BY author;
+
+
+SELECT amount
+FROM book
+GROUP BY amount;
+
+
+SELECT author, sum(amount), count(amount)
+FROM book
+GROUP BY author;
+
+
+SELECT author, SUM(amount)
+FROM book
+GROUP BY author;
+
+
+INSERT INTO book (title, author, price, amount) VALUES ('Черный человек','Есенин С.А.', Null, Null);
+
+SELECT author, COUNT(author), COUNT(amount), COUNT(*)
+FROM book
+GROUP BY author;
