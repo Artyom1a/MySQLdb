@@ -196,3 +196,18 @@ GROUP BY author;
 SELECT author, MIN(price) AS min_price
 FROM book
 GROUP BY author;
+
+
+SELECT author, SUM(price * amount) AS Стоимость
+FROM book
+GROUP BY author;
+
+
+SELECT author, ROUND(AVG(price),2) AS Средняя_цена
+FROM book
+GROUP BY author;
+
+
+SELECT author, SUM(price*amount) AS Стоимость, ROUND(SUM(((price*amount)*18/100)/(1+18/100)),2) as НДС ,ROUND(SUM((price*amount)/(1+18/100)),2) as  Стоимость_без_НДС
+FROM book
+GROUP BY author;
