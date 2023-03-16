@@ -1,0 +1,14 @@
+-- 20.Отобразите средний возраст студентов каждого университета
+
+
+USE UNIVERSITYDB;
+
+SELECT UN.TITLE, AVG(ST.AGE) FROM STUDENTS ST
+JOIN UNIVERSITY UN
+ON UN.ID=ST.UNIVERSITY_ID
+GROUP BY UN.ID;
+
+
+
+
+
