@@ -264,3 +264,12 @@ SELECT author,
 FROM book
 GROUP BY author
 HAVING SUM(amount) > 10 AND author <> 'Есенин С.А.';
+
+
+SELECT author,
+SUM(price*amount) as Стоимость
+FROM book
+WHERE title  <> 'Идиот' and title <> 'Белая гвардия' 
+GROUP BY author
+HAVING Стоимость>5000
+ORDER BY Стоимость DESC;
