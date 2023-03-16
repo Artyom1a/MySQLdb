@@ -222,3 +222,13 @@ SELECT SUM(amount) AS Количество,
 FROM book;
 
 
+SELECT MIN(price) as Минимальная_цена,MAX(price) as Максимальная_цена, ROUND(AVG(price),2) as Средняя_цена
+FROM book;
+
+
+SELECT author,
+    MIN(price) AS Минимальная_цена, 
+    MAX(price) AS Максимальная_цена
+FROM book
+GROUP BY author
+HAVING SUM(price * amount) > 5000; 
