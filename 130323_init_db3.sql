@@ -211,3 +211,14 @@ GROUP BY author;
 SELECT author, SUM(price*amount) AS Стоимость, ROUND(SUM(((price*amount)*18/100)/(1+18/100)),2) as НДС ,ROUND(SUM((price*amount)/(1+18/100)),2) as  Стоимость_без_НДС
 FROM book
 GROUP BY author;
+
+
+SELECT SUM(amount) AS Количество
+FROM book;
+
+
+SELECT SUM(amount) AS Количество, 
+    SUM(price * amount) AS Стоимость
+FROM book;
+
+
