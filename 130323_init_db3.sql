@@ -241,3 +241,18 @@ FROM book
 GROUP BY author
 HAVING SUM(price * amount) > 5000 
 ORDER BY Минимальная_цена DESC;
+
+
+SELECT ROUND(AVG(price),2) AS Средняя_цена, 
+    SUM(price*amount) AS Стоимость
+FROM book
+WHERE amount BETWEEN 5 and 14;
+
+
+SELECT author,
+    MIN(price) AS Минимальная_цена,
+    MAX(price) AS Максимальная_цена
+FROM book
+WHERE author <> 'Есенин С.А.'
+GROUP BY author
+HAVING SUM(amount) > 10;
