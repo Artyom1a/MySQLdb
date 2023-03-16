@@ -256,3 +256,11 @@ FROM book
 WHERE author <> 'Есенин С.А.'
 GROUP BY author
 HAVING SUM(amount) > 10;
+
+
+SELECT author,
+    MIN(price) AS Минимальная_цена,
+    MAX(price) AS Максимальная_цена
+FROM book
+GROUP BY author
+HAVING SUM(amount) > 10 AND author <> 'Есенин С.А.';
