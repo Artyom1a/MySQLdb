@@ -113,3 +113,18 @@ FOREIGN KEY(IDProducts) REFERENCES Products(ID)
 
 SELECT * FROM Categories;
 
+INSERT INTO Categories(IDProducts,NAMECategories) VALUES(1,'technique');
+-- 9.
+-- Напишите запрос для выбора всех товаров, относящихся к определенной
+-- категории
+
+SELECT * FROM Products
+INNER JOIN Categories
+ON Products.ID=Categories.IDProducts;
+
+-- 10.
+-- Напишите запрос для выбора всех пользователей, которые сделали заказы на
+-- сумму больше определенной.
+
+
+
