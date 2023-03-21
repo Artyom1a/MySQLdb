@@ -38,7 +38,7 @@ SELECT * FROM Orders;
 
 INSERT INTO Orders(IDusers,DATAREGISTRATION,STATUSPURCHASE) VALUES(1,now(),"новый");
 INSERT INTO Orders(IDusers,DATAREGISTRATION,STATUSPURCHASE) VALUES(1,now(),"новый");
-
+INSERT INTO Orders(IDusers,DATAREGISTRATION,STATUSPURCHASE) VALUES(2,now(),"новый");
 -- 3.
 -- Напишите запрос для выбора всех пользователей, зарегистрированных в
 -- определенный день
@@ -79,7 +79,7 @@ SELECT * FROM PRODUCTS;
 INSERT INTO Products(IDOrders,NAMEPRODUCTS,DESCRIPTIONS,PRICE) VALUES(1,'LAPTOP','THIS IS THE BEST LAPTOP',100);
 
 INSERT INTO Products(IDOrders,NAMEPRODUCTS,DESCRIPTIONS,PRICE) VALUES(2,'Table','comfortable table',50);
-
+INSERT INTO Products(IDOrders,NAMEPRODUCTS,DESCRIPTIONS,PRICE) VALUES(3,'Table','comfortable table',50);
 SELECT * FROM Orders
 INNER JOIN Products
 ON Orders.ID=Products.IDOrders
@@ -125,6 +125,21 @@ ON Products.ID=Categories.IDProducts;
 -- 10.
 -- Напишите запрос для выбора всех пользователей, которые сделали заказы на
 -- сумму больше определенной.
+
+
+SELECT SUM(Products.PRICE) FROM USERS
+INNER JOIN Orders 
+ON USERS.ID=Orders.IDUSERS
+INNER JOIN PRODUCTS
+ON Orders.ID=PRODUCTS.IDOrders
+GROUP BY USERS.ID
+HAVING SUM(Products.PRICE)>50;
+
+
+SELECT * FROM USERS;
+SELECT * FROM PRODUCTS;
+SELECT * FROM Orders;
+SELECT * FROM Categories;
 
 
 
